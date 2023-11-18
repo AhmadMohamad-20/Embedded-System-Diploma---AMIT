@@ -1,0 +1,126 @@
+{
+        printf("Enter the student number you want to update : ");
+        scanf("%d", &studentIndex);
+        while (modifyIndex != 0)
+        {
+            printf("Choose what do you want to update : \n");
+            printf("-> (1) First Name \n");
+            printf("-> (2) Last Name \n");
+            printf("-> (3) ID \n");
+            printf("-> (4) GPA \n");
+            printf("-> (5) Number of courses taken \n");
+            printf("-> (0) Done \n");
+            
+            printf("=> the option : ");
+            scanf("%d",&modifyIndex);
+            switch(modifyIndex)
+            {
+                case 1 :
+                    printf("Printf the new Last Name : ");
+                    scanf("%s", &studentArr[studentIndex - 1].lastName);
+                    fflush(stdin);
+                    break;
+                case 2 :
+                    printf("Printf the new Last Name : ");
+                    scanf("%s", &studentArr[studentIndex - 1].lastName);
+                    fflush(stdin);
+                    break;
+                case 3 :
+                    printf("Enter the new ID : ");
+                    scanf("%d", &ID);
+                    fflush(stdin);
+                    flag = checkID(studentArr, ID);
+                    while (ID == flag)
+                    {
+                        printf("Error !!! Already existing ID !! enter a different ID => ");
+                        scanf("%d", &ID);
+                    }
+                    studentArr[studentIndex - 1].ID = ID;
+                    break;
+                case 4 :
+                    printf("Printf the new GPA : ");
+                    scanf("%f", &studentArr[studentIndex - 1].GPA);
+                    fflush(stdin);
+                    break;
+                case 5 :
+                    printf("Printf the new number of registered courses : ");
+                    scanf("%d", &studentArr[studentIndex - 1].coursesNum);
+                    break;
+                case 0 :
+                    printf("Thank you for updating the data\n");
+                    break;
+                default :
+                    break;
+            }
+        }
+        
+        printf("Do you want to modify the First Name? [y] for yes , [n] for no  => ");
+        scanf("%s", &modify);
+        fflush(stdin);
+        if ((modify == 'y') || (modify == 'Y'))
+        {
+            printf("Printf the new First Name : ");
+            scanf("%s", &studentArr[studentIndex - 1].firstName);
+        }
+        else
+        {
+            /* Do Nothing*/
+        }
+        printf("Do you want to modify the Last Name? [y] for yes , [n] for no  => ");
+        scanf("%s", &modify);
+        fflush(stdin);
+        if ((modify == 'y') || (modify == 'Y'))
+        {
+            printf("Printf the new Last Name : ");
+            scanf("%s", &studentArr[studentIndex - 1].lastName);
+        }
+        else
+        {
+            /* Do Nothing*/
+        }
+        printf("Do you want to modify the ID ? [y] for yes , [n] for no  => ");
+        scanf("%s", &modify);
+        fflush(stdin);
+        if ((modify == 'y') || (modify == 'Y'))
+        {
+            printf("Enter the new ID : ");
+            scanf("%d", &ID);
+            fflush(stdin);
+            flag = checkID(studentArr, ID);
+
+            while (ID == flag)
+            {
+                printf("Error !!! Already existing ID !! enter a different ID => ");
+                scanf("%d", &ID);
+            }
+            studentArr[studentIndex - 1].ID = ID;
+        }
+        else
+        {
+            /* Do Nothing*/
+        }
+        printf("Do you want to modify the GPA ? [y] for yes , [n] for no  => ");
+        scanf("%s", &modify);
+        fflush(stdin);
+        if ((modify == 'y') || (modify == 'Y'))
+        {
+            printf("Printf the new GPA : ");
+            scanf("%f", &studentArr[studentIndex - 1].GPA);
+        }
+        else
+        {
+            /* Do Nothing*/
+        }
+        printf("Do you want to modify the number of courses taken ? [y] for yes , [n] for no  => ");
+        scanf("%s", &modify);
+        fflush(stdin);
+        if ((modify == 'y') || (modify == 'Y'))
+        {
+            printf("Printf the new GPA : ");
+            scanf("%d", &studentArr[studentIndex - 1].coursesNum);
+        }
+        else
+        {
+            /* Do Nothing*/
+        }
+    }
