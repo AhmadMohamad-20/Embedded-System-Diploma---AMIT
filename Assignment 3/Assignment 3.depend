@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1698429045 source:d:\courses\embedded systems\amit\tasks\assignment 3\calculator.c
+	"calculator.h"
+
+1698428172 d:\courses\embedded systems\amit\tasks\assignment 3\calculator.h
+
+1698429309 source:d:\courses\embedded systems\amit\tasks\assignment 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculator.h"
+
